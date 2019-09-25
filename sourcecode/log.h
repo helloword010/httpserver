@@ -6,6 +6,7 @@
 #include<sys/types.h>
 #include<sys/stat.h>
 #include<fcntl.h>
+/**********该日志类为非线程安全的。如需在多线程程序中使用，建议区分文件使用*******************************/
 /*log 的格式为[日期-小时（24小时制）-分钟-秒-毫秒]-----todo*/
     enum LOG_MODE{
           DAY,

@@ -1,2 +1,2 @@
 # webserver
-This project is just for fun!
+1.LOG class is ok .It is not a thread security class.
