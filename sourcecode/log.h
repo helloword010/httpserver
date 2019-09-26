@@ -7,6 +7,7 @@
 #include<sys/stat.h>
 #include<fcntl.h>
 /**********该日志类为非线程安全的。如需在多线程程序中使用，建议区分文件使用*******************************/
+/*该日志共3种模式，按日期/小时/分钟 生成日志文件。构造时共传入两个参数，第一个为路径。第二个为模式：DAY/HOUR/MINUTE */
 /*log 的格式为[日期-小时（24小时制）-分钟-秒-毫秒]-----todo*/
     enum LOG_MODE{
           DAY,
@@ -24,7 +25,7 @@ public:
           std::cout<<"请重新构造"<<std::endl;
 }
 };/*文件的路径必须是已存在的*/
-	~Log(){std::cout<<"已析构"<<std::endl;}
+	~Log(){}
 	std::string get_time_str(LOG_MODE log_Mode);
 	void log_message();
 	void write_line(std::string log_message);

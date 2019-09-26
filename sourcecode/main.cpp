@@ -1,20 +1,16 @@
 #include<iostream>
-#include"server.h"
 #include<string>
 #include"log.h"
+#include"server.h"
+#include"phrase.h"
 int main()
 {
-        Log log_obj("/home/yunzhitec/PROJECT/LOG/",HOUR);
-//	std::cout<<log_obj.get_time_str()<<std::endl;
-	
-std::cout<<log_obj.get_time_str(HOUR);
- std::cout<<log_obj. get_time_str(HOUR);
- std::cout<<log_obj. get_time_str(MINUTE);
-log_obj.log_message();
-	
-	log_obj.write_line("你好");
+      
+std::cout<<Content_type_table[1][1]<<std::endl;
 Server server_obj("127.0.0.1",8080);
 	server_obj.show_message();
-	
+server_obj.server_init();
+Http_phrase ph("nihao\r\n\r\n你好");
+ph.phrase();
 	return 0;
 }

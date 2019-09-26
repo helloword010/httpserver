@@ -1,2 +1,2 @@
-server:	main.cpp server.cpp log.cpp
-	g++ main.cpp server.cpp log.cpp -o server
+server:	main.cpp server.cpp log.cpp phrase.cpp
+	g++ main.cpp server.cpp log.cpp phrase.cpp -o server
