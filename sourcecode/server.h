@@ -19,6 +19,8 @@ class Server{
 	private:
 	struct sockaddr_in address;
 	int listenfd,sendfd,recvfd;
+
+	void server_receive();
 	
         
 };
